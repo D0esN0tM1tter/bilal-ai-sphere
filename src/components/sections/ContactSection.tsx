@@ -19,7 +19,7 @@ const ContactSection = () => {
   const { toast } = useToast();
 
   // EmailJS configuration - You'll need to replace these with your actual EmailJS credentials
-  const EMAIL_SERVICE_ID = 'service_bhxh12r'; // Replace with your EmailJS service ID
+  const EMAIL_SERVICE_ID = 'service_nuqoik7'; // Replace with your EmailJS service ID
   const EMAIL_TEMPLATE_ID = 'template_6zmdtxk'; // Replace with your EmailJS template ID  
   const EMAIL_PUBLIC_KEY = 'KtBObUXCOVhg3CDTL'; // Replace with your EmailJS public key
 

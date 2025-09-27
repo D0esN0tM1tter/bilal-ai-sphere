@@ -71,7 +71,6 @@ const Navigation = () => {
               className="text-2xl font-bold text-gradient-primary font-poppins cursor-pointer"
               onClick={() => scrollToSection('hero')}
             >
-              LB
             </motion.div>
 
             {/* Desktop Navigation */}

@@ -24,7 +24,7 @@ const ProjectsSection = () => {
     {
       title: 'Medical Assistance Chatbot',
       description: 'Intelligent medical assistance chatbot powered by Large Language Models. Provides preliminary medical guidance and information to users.',
-      technologies: ['Python', 'Flask', 'React', 'LLM', 'Deepseek R1'],
+      technologies: ['Python', 'FastAPI', 'React', 'LLM', 'Deepseek R1'],
       highlight: 'Deepseek R1 integration',
       category: 'AI/Healthcare',
       status: 'Completed',

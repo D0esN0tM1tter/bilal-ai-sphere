@@ -39,7 +39,7 @@ const AboutSection = () => {
             <Card className="card-tech">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-gradient-secondary">
-                  Professional Objective
+                  Quick Overview
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Engineering student passionate about AI and web development, with hands-on 
@@ -106,32 +106,7 @@ const AboutSection = () => {
         </div>
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-        >
-          <Card className="card-tech text-center">
-            <CardContent className="p-6">
-              <div className="text-4xl font-bold text-gradient-primary mb-2">3+</div>
-              <p className="text-muted-foreground">Years of Study</p>
-            </CardContent>
-          </Card>
-          <Card className="card-tech text-center">
-            <CardContent className="p-6">
-              <div className="text-4xl font-bold text-gradient-secondary mb-2">10+</div>
-              <p className="text-muted-foreground">Technologies</p>
-            </CardContent>
-          </Card>
-          <Card className="card-tech text-center">
-            <CardContent className="p-6">
-              <div className="text-4xl font-bold text-gradient-primary mb-2">5+</div>
-              <p className="text-muted-foreground">Projects</p>
-            </CardContent>
-          </Card>
-        </motion.div>
+       
       </div>
     </section>
   );

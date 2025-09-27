@@ -11,19 +11,16 @@ const ExperienceSection = () => {
       location: 'Rabat, Morocco',
       period: 'July – August 2024',
       type: 'Internship',
-      description: 'Gained hands-on experience in web development at Morocco\'s premier financial institution, contributing to digital transformation initiatives.',
+      description: 'Gained hands-on experience in web development at one of Morocco\'s premier financial institution, contributing to digital transformation initiatives.',
       achievements: [
-        'Developed responsive web applications using modern frameworks',
-        'Collaborated with senior developers on enterprise-level projects',
+
+        'Designed and developed a coding challenges platform used for programmer recruitment (Leetcode Style)',
+        'Implemented an automated evaluation  with JDoodle API optimizing assessment time',
         'Implemented best practices in code quality and version control',
-        'Participated in agile development methodologies'
       ],
-      technologies: ['Angular', 'Spring Boot', 'TypeScript', 'Git'],
-      impact: {
-        projects: '3+',
-        teamSize: '5',
-        duration: '2 months'
-      }
+      technologies: ['Angular', 'Spring Boot', 'SQL', 'Git'] , 
+      imageUrl : "placeholder.svg"
+  
     }
   ];
 
@@ -31,7 +28,7 @@ const ExperienceSection = () => {
     {
       title: 'Team Leader & Trainer',
       organization: 'Fatal Error ENSAM Rabat',
-      period: '2023 - Present',
+      period: 'Acadmic Year 2024',
       type: 'Leadership',
       description: 'Leading a student tech community and providing educational workshops to fellow engineering students.',
       achievements: [
@@ -40,11 +37,9 @@ const ExperienceSection = () => {
         'Mentored junior students in programming fundamentals',
         'Built a collaborative learning environment'
       ],
-      impact: {
-        members: '300+',
-        workshops: '10+',
-        events: '5+'
-      }
+
+      imageUrl : "placeholder.svg"
+    
     }
   ];
 
@@ -56,6 +51,7 @@ const ExperienceSection = () => {
       viewport={{ once: true }}
     >
       <Card className="card-tech">
+        
         <CardHeader>
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
@@ -133,17 +129,7 @@ const ExperienceSection = () => {
               </div>
             </div>
           )}
-
-          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50">
-            {Object.entries(experience.impact).map(([key, value]) => (
-              <div key={key} className="text-center">
-                <div className="text-2xl font-bold text-gradient-primary">{String(value)}</div>
-                <div className="text-xs text-muted-foreground capitalize">
-                  {key.replace(/([A-Z])/g, ' $1').trim()}
-                </div>
-              </div>
-            ))}
-          </div>
+         
         </CardContent>
       </Card>
     </motion.div>

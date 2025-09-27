@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import NeuralNetwork from './NeuralNetwork';
-import FloatingGeometry from './FloatingGeometry';
 import ParticleField from './ParticleField';
 
 interface Scene3DProps {
@@ -27,7 +26,6 @@ const Scene3D = ({ className }: Scene3DProps) => {
         <Suspense fallback={null}>
           <ParticleField />
           <NeuralNetwork />
-          <FloatingGeometry />
         </Suspense>
         
         <OrbitControls

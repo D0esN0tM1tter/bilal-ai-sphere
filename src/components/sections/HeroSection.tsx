@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Scene3D from '@/components/3d/Scene3D';
 import heroImage from '@/assets/hero-bg.jpg';
+import profileImage from '/profile.jpeg'; // Add your profile image here
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -53,17 +54,43 @@ const HeroSection = () => {
       <Scene3D className="absolute inset-0 pointer-events-none" />
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Profile Picture */}
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative">
+              <img
+                src={profileImage}
+                alt="Bilal Lahfari"
+                className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover shadow-2xl border-4 border-primary/30"
+                style={{
+                  // You can control the exact size by modifying these values
+                  width: '300px',  // Default size - change this value
+                  height: '300px', // Default size - change this value
+                  minWidth: '150px',  // Minimum size on very small screens
+                  minHeight: '150px'  // Minimum size on very small screens
+                }}
+              />
+              
+              {/* Static decorative ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 pointer-events-none"></div>
+            </div>
+          </motion.div>
+
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-6 font-poppins"
+            className="text-5xl md:text-7xl font-bold mb-6 font-poppins"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
             <span className="text-gradient-primary">LAHFARI</span>
             <br />
@@ -74,7 +101,7 @@ const HeroSection = () => {
             className="h-16 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             <p className="text-2xl md:text-3xl font-medium text-muted-foreground">
               {displayText}
@@ -86,16 +113,16 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-secondary font-semibold mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
           >
-            "Seeking an Internship in Artificial Intelligence"
+            The mind is everything, what you think, you become
           </motion.p>
 
           <motion.div 
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
           >
             <Button 
               onClick={scrollToProjects}
@@ -118,13 +145,8 @@ const HeroSection = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
         >
-          <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
-            <span>📧 lahfaribilal2@gmail.com</span>
-            <span>📱 +212 602526049</span>
-            <span>📍 Rabat, Morocco</span>
-          </div>
         </motion.div>
       </div>
 

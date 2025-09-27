@@ -7,7 +7,7 @@ const AboutSection = () => {
       year: '2023-2026',
       institution: 'ENSAM Rabat',
       degree: 'Engineering Degree',
-      field: 'Data Science, AI & Digital Health',
+      field: 'Artfificial Intelligence and Big Data',
       status: 'In Progress'
     }
   ];

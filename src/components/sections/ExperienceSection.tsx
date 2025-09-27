@@ -6,6 +6,21 @@ import { CalendarDays, MapPin, Building } from 'lucide-react';
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: 'AI Engineer Intern',
+      company: 'SNRT',
+      location: 'Rabat, Morocco',
+      period: 'July – August 2025',
+      type: 'Internship',
+      description: 'Developed cutting-edge AI solutions at Morocco\'s National Company of Radiodiffusion and Television, focusing on multilingual video processing and transcription technologies.',
+      achievements: [
+        'Architected end-to-end offline multilingual video transcription and summarization pipeline using OpenAI Whisper for speech recognition, Helsinki-NLP models for machine translation, and Facebook BART-CNN for abstractive summarization',
+        'Developed and deployed production-ready FastAPI backend and React frontend with modular architecture and dependency injection',
+        'Implemented audio preprocessing service using Librosa and automated subtitle embedding with FFmpeg'
+      ],
+      technologies: ['OpenAI Whisper', 'Helsinki-NLP', 'Facebook BART-CNN', 'FastAPI', 'React', 'Librosa', 'FFmpeg'],
+      imageUrl: "placeholder.svg"
+    },
+    {
       title: 'Web Developer Intern',
       company: 'Caisse de Dépôt et de Gestion (CDG)',
       location: 'Rabat, Morocco',
@@ -13,14 +28,12 @@ const ExperienceSection = () => {
       type: 'Internship',
       description: 'Gained hands-on experience in web development at one of Morocco\'s premier financial institution, contributing to digital transformation initiatives.',
       achievements: [
-
-        'Designed and developed a coding challenges platform used for programmer recruitment (Leetcode Style)',
-        'Implemented an automated evaluation  with JDoodle API optimizing assessment time',
-        'Implemented best practices in code quality and version control',
+        'Designed and deployed scalable code evaluation platform supporting multi-language execution via JDoodle API, streamlining technical recruitment for developer positions',
+        'Built robust Spring Boot backend with MySQL database and responsive Angular frontend, implementing comprehensive CRUD operations',
+        'Applied enterprise-grade modular layered architecture following industry best practices, ensuring maintainable and scalable codebase'
       ],
-      technologies: ['Angular', 'Spring Boot', 'SQL', 'Git'] , 
-      imageUrl : "placeholder.svg"
-  
+      technologies: ['Angular', 'Spring Boot', 'MySQL', 'JDoodle API', 'Git'],
+      imageUrl: "placeholder.svg"
     }
   ];
 

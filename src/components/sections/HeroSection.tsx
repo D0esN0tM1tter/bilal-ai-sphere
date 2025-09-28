@@ -31,8 +31,18 @@ const HeroSection = () => {
   }, [currentRole]);
 
   const handleDownloadCV = () => {
-    // Placeholder for CV download
-    console.log('Downloading CV...');
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/LAHFARI_ENG.pdf';
+    link.download = 'LAHFARI_ENG.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleViewCV = () => {
+    // Open CV in a new tab/window for viewing
+    window.open('/LAHFARI_ENG.pdf', '_blank');
   };
 
   const scrollToProjects = () => {
@@ -130,13 +140,22 @@ const HeroSection = () => {
             >
               View Projects
             </Button>
-            <Button 
-              variant="outline" 
-              onClick={handleDownloadCV}
-              className="btn-hero-outline text-lg px-8 py-4"
-            >
-              Download CV
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button 
+                variant="outline" 
+                onClick={handleViewCV}
+                className="btn-hero-outline text-base px-6 py-3"
+              >
+                View CV
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={handleDownloadCV}
+                className="btn-hero-outline text-base px-6 py-3"
+              >
+                Download CV
+              </Button>
+            </div>
           </motion.div>
         </motion.div>
 
